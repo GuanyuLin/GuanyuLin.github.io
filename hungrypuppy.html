@@ -65,7 +65,7 @@ ROOM 1
 0,a,0,e,18,c,c,1a,19,0,0,0,b,0,e,c
 0,a,0,0,0,0,0,1c,18,c,f,0,b,0,0,0
 0,a,a,a,a,a,0,a,a,a,a,a,a,a,a,a
-0,0,0,0,0,a,0,a,1b,1b,1b,1b,1b,1b,1b,1b,1b
+0,0,0,0,0,a,0,a,1b,1b,1b,1b,1b,1b,1b,1b
 NAME 2
 ITM 0 11,13
 ITM 3 12,3
@@ -1131,9 +1131,9 @@ DLG ITM_4
 A sticker on the can says, "No.1 canned dog food." {
   - {item "meat can"} == 1 ?
     Lucky! You found a meat can~
-  - {item "meat can"} < 4 ?
+  - {item "meat can"} <= 4 ?
     Another meat can! His eyes tells he wants some more.
-  - {item "milk"} == 4 ?
+  - {item "meat can"} == 5 ?
     Now puppy is very full. Let's take him to his mother.
 }
 """
@@ -1179,7 +1179,7 @@ DLG SPR_8
     Just painted board. It says, "Not weeding yet."
     The puppy doesn't want to leave
     He wants to eat some more.
-  - {item "meat can"} == 4 ?
+  - {item "meat can"} == 5 ?
     The puppy suddenly ran out along the wall on the right. Keep up!
 }
 """
@@ -1187,13 +1187,13 @@ DLG SPR_8
 DLG ITM_5
 """
 Nothing on this path, but you feel this path looks a bit familiar.
-You are still not sure if this is the right path.
+You are still not sure if this is the right way.
 """
 
 DLG ITM_6
 """
-The grass of this path is lower than two sides. It looks like another animal walking through this path before. 
-But you are not should if this path is right.
+The grass of this path is lower than two sides. It looks like another animal walks through this path before. 
+But you are not sure if this path is the right way.
 """
 
 DLG ITM_3
