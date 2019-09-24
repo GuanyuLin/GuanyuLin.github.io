@@ -11,14 +11,14 @@
 <script type="text/bitsyGameData" id="exportedGameData">
 Hungry Puppy ~ help him find some food
 
-# BITSY VERSION 6.3
+# BITSY VERSION 6.4
 
 ! ROOM_FORMAT 1
 
 PAL 0
-140,216,120
-49,167,49
-251,252,236
+144,219,133
+139,85,71
+254,252,190
 
 PAL 1
 255,255,255
@@ -192,7 +192,6 @@ ROOM 6
 0,0,0,0,0,1e,1e,1e,1e,1e,1e,1e,1e,1e,1e,1e
 0,0,0,0,1e,1e,1e,1e,1e,1e,1e,1e,1e,1e,0,0
 NAME 7
-EXT 0,6 5 0,3
 PAL 0
 
 TIL 10
@@ -761,7 +760,7 @@ SPR A
 00111100
 00111100
 00100100
-POS 0 0,1
+POS 2 4,6
 
 SPR a
 00000000
@@ -1150,6 +1149,7 @@ DLG SPR_6
 "Woof woof woof," the puppy says to his mom.
 "Woof woof," the puppy says to you.
 "Goodbye puppy." you say.
+[The End]
 """
 
 DLG SPR_8
@@ -4884,7 +4884,7 @@ var spriteStartLocations = {};
 /* VERSION */
 var version = {
 	major: 6, // major changes
-	minor: 3 // smaller changes
+	minor: 4 // smaller changes
 };
 function getEngineVersion() {
 	return version.major + "." + version.minor;
