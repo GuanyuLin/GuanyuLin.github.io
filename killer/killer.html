@@ -101,20 +101,26 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
 	<div id="store-area" hidden><tw-storydata name="killer" startnode="1" creator="Twine" creator-version="2.3.3" ifid="728AA58D-69B3-4580-95DC-99001FBA0284" zoom="1" format="SugarCube" format-version="2.28.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body{
-  background-color:ffffff;
+  background-color: #ffffff;
   }
-h1{
-  font-size:16ps;
-  color:000000;
-  }
+p{
+  color:black;
 h2{ 
-  font-size: 18px;
+  font-size: 16px;
   color: #B37D7D;
   }
+a
+{
+  color: #76A9B0;
+}
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.destroy();
-</script><tw-passagedata pid="1" name="game" tags="" position="201,300" size="100,100">Who is ther killer?
+</script><tw-passagedata pid="1" name="game" tags="" position="201,300" size="100,100">Welcome to
+Who is ther killer?
 
+Get ready to start your adventure?
+
+Enter your name
 &lt;&lt;textbox &quot;$name&quot; &quot;Your name&quot; &quot;node_to_go_to&quot;&gt;&gt;
 
 [[start game|intro]]</tw-passagedata><tw-passagedata pid="2" name="intro" tags="" position="352,301" size="100,100">The is a night as usual. You played mobile games, chatted with friends, and checked tomorrow&#39;s schedule before going to bed.
@@ -136,7 +142,8 @@ A voice suddenly appeared in your mind.
 
 &quot;Remember, you have only one chance to tell me the correct answers. Go check every room more than one time.&quot;
 
-&quot;All right, it&#39;s [[game time|start]] :))&quot;</tw-passagedata><tw-passagedata pid="4" name="room1" tags="" position="405,496" size="100,100">This is a simple room, you can tell it is a study room.
+&quot;All right, it&#39;s [[game time|start]] :))&quot;</tw-passagedata><tw-passagedata pid="4" name="room1" tags="" position="405,496" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room1.png&quot; width=&quot;80%&quot;&gt;
+This is a simple room, you can tell it is a study room.
 
 A desk in front, Several paintings on the wall, a broken vase on the floor, an oval wooden frame mirror and a red wood table on its right side. A locked door on your left hand side.
 
@@ -147,7 +154,7 @@ Let&#39;s go check......
 [[oval mirror]]
 [[red wood table]]
 [[door]]
-&lt;&lt;elseif $number is 1&gt;&gt;or
+&lt;&lt;if $number is 1&gt;&gt;or
 [[Turn the light off|off1]]
 
 [[leave this room|room]]&lt;&lt;endif&gt;&gt;
@@ -297,7 +304,8 @@ A light ball is floating in the air.
 Go to other rooms
 [[Study room|room1]]
 [[bedroom1|room2]]
-&lt;&lt;if $hintC is 5&gt;&gt;[[bedroom2|room3]]&lt;&lt;else&gt;&gt;bedroom2 (is locked now)&lt;&lt;endif&gt;&gt;
+&lt;&lt;if $hintC is 5&gt;&gt;[[bedroom2|room3]]&lt;&lt;else&gt;&gt;bedroom2 (is locked now)
+&lt;&lt;endif&gt;&gt;
 </tw-passagedata><tw-passagedata pid="16" name="monster" tags="" position="395,1112" size="100,100">&quot;Do you figure out who was killed? Who is the killer?&quot;
 &quot;Remember you have only one chance to tell me the correct answer.&quot;
 
@@ -308,7 +316,8 @@ It&#39;s the...
 [[Female painter]]
 had been killed.
 
-&lt;&lt;set $killer to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="room2" tags="" position="876,938" size="100,100">This is a dark tone room. It&#39;s probably a men&#39;s bedroom.
+&lt;&lt;set $killer to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="room2" tags="" position="876,938" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room2.png&quot; width=&quot;80%&quot;&gt;
+This is a dark tone room. It&#39;s probably a men&#39;s bedroom.
 
 On the left is a dark wooden wardrobe with a twin bed in the middle and a same dark wooden bedside dresser on the right.
 There is also a wool carpet in front of the bed with a small round table and a wastebasket next to it.
@@ -386,7 +395,7 @@ Will you take a look at......
 &lt;&lt;if $number is 1&gt;&gt;or
 [[Turn the light off|off3]]
 
-[[leave this room|room]]&lt;&lt;endif&gt;&gt;
+[[Leave this room|room]]&lt;&lt;endif&gt;&gt;
 </tw-passagedata><tw-passagedata pid="23" name="What options?" tags="" position="125,1300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="bed" tags="" position="26,954" size="100,100">Now, it&#39;s time to have a high-quality and no disturbed sleeping.
 
 [[Good night]]</tw-passagedata><tw-passagedata pid="25" name="Good night" tags="" position="5,1104" size="100,100">Credit
@@ -568,7 +577,7 @@ or
 
 
 [[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="42" name="1" tags="" position="132,1918" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/1.jpg&quot; width=&quot;400&quot;&gt;
-You solve the Klotski!!
+&lt;&lt;set $hintC to $hintC +1&gt;&gt;&lt;&lt;set $number to $number +1&gt;&gt;You solve the Klotski!!
 When you finish the game, the whole piece of wood automatically bounces so you can take it out easily.
 There are two pieces of paper inside, one is small piece and the other  was two pieces folded together.
 
@@ -581,7 +590,8 @@ She hide the divorse agreement. Does that mean she is hesitating to divorce?
 
 [[Look at other things in this room|room3]]
 
-&lt;&lt;set $hintC to $hintC +1&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="6" tags="" position="926,2053" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/6.jpg&quot; width=&quot;400&quot;&gt;
+
+</tw-passagedata><tw-passagedata pid="43" name="6" tags="" position="926,2053" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/6.jpg&quot; width=&quot;400&quot;&gt;
 Do you want to
 [[Move 2 up|7]]
 or
@@ -633,7 +643,8 @@ Maybe you need to try another room.
 
 [[Turn the light on|room1]]</tw-passagedata><tw-passagedata pid="51" name="off2" tags="" position="1004,805" size="100,100">You turn off the light, and find that there is light coming out of the gap in the wardrobe.
 
-[[Check the wardrobe|wardrobe]]</tw-passagedata><tw-passagedata pid="52" name="room4" tags="" position="1273,747" size="100,100">The moment you open the door, a rich rose scent comes out.
+[[Check the wardrobe|wardrobe]]</tw-passagedata><tw-passagedata pid="52" name="room4" tags="" position="1273,747" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room4.png&quot; width=&quot;80%&quot;&gt;
+The moment you open the door, a rich rose scent comes out.
 The room has barely any furniture here, only a king-size bed, an easel and whole room of paintings.
 &lt;&lt;if $clue &lt; 2&gt;&gt;
 Look at...
@@ -641,10 +652,10 @@ Look at...
 [[easel]]
 [[king-size bed]]
 
-&lt;&lt;if $clue &gt;= 2&gt;&gt;
+&lt;&lt;elseif $clue &gt;= 2&gt;&gt;
 &lt;h2&gt;Seems like the person who lived here was the woman who invited the husband to have dinner. The art exhibition he was looking at probably was also her exhibition.
 Did the husband had an affair?&lt;/h2&gt;
-
+&lt;&lt;endif&gt;&gt;
 Look at...
 [[those paintings]]
 [[easel]]
