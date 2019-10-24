@@ -165,7 +165,7 @@ Let&#39;s go check......
 [[oval mirror]]
 [[red wood table]]
 [[door]]
-&lt;&lt;if $number is 1&gt;&gt;or
+&lt;&lt;if $hintC is 6&gt;&gt;or
 [[Turn the light off|off1]]
 
 [[leave this room|room]]&lt;&lt;endif&gt;&gt;
@@ -199,12 +199,12 @@ Intuition tells you they are the hints of the torn note paper.&lt;/p&gt;
 [[check the note paper|torn note paper]]
 &lt;&lt;else&gt;&gt;
 You carefully remove the fragment and find another piece of paper.
-&lt;p&gt;&quot;2. First line and then Second line&quot;&lt;/p&gt;
+&lt;p&gt;__&quot;2. First line and then Second line&quot;__&lt;/p&gt;
 &lt;&lt;endif&gt;&gt;
 Look at [[something else|room1]]</tw-passagedata><tw-passagedata pid="8" name="oval mirror" tags="" position="527,653" size="100,100">A mirror, nothing special.
 It hangs on the wall but nothing behind the mirror.
 
-Look at [[something else|room1]]</tw-passagedata><tw-passagedata pid="9" name="red wood table" tags="" position="675,652" size="100,100">&lt;&lt;if $break is 0&gt;&gt;&lt;&lt;set $break to $break+1&gt;&gt;&lt;&lt;endif&gt;&gt;There is a broken vinyl record on this table.
+Look at [[something else|room1]]</tw-passagedata><tw-passagedata pid="9" name="red wood table" tags="" position="680,658" size="100,100">&lt;&lt;if $break is 0&gt;&gt;&lt;&lt;set $break to $break+1&gt;&gt;&lt;&lt;endif&gt;&gt;There is a broken vinyl record on this table.
 
 You carefully take the record off and find a piece of paper places underneath.
 
@@ -250,7 +250,7 @@ aenhnrd
 First line and then second line......
 P...A...G...E...O...N...E...H...U...N...D...R...E...D...
 
-&quot;Page one hundred!!&quot;&lt;/p&gt;
+__&quot;Page one hundred!!&quot;__&lt;/p&gt;
 You immediately [[pick up the book|book]].
 
 &lt;&lt;elseif $break is 3&gt;&gt;
@@ -282,20 +282,11 @@ Maybe you need some hints? Should you check other stuff?
 
 
 [[Loading.....|room1]] 
-</tw-passagedata><tw-passagedata pid="13" name="pick up the book" tags="" position="177,946" size="100,100">You turn to page one hundred.
-The first line, &quot;October 24, it is my first day to see you......&quot;
-1024! It must be a password!
-&lt;&lt;if 
-Then you hear a subtle sound from the door
-You try to turn the doorknob again.
-The door is open!
-
-[[Leave the room|room]]
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="door" tags="" position="875,654" size="100,100">&lt;&lt;if $break is 3&gt;&gt;Do you want to
+</tw-passagedata><tw-passagedata pid="13" name="door" tags="" position="875,654" size="100,100">&lt;&lt;if $break is 3&gt;&gt;Do you want to
 
 [[stay in this room|room1]]
-
-Or [[leave this room|room]]
+or 
+__[[leave this room|room]]__
 
 &lt;&lt;else&gt;&gt;
 You try to open the door but the door is locked.
@@ -306,7 +297,7 @@ Look at [[something else|room1]]
 
 (if you can&#39;t find another hint, recheck each item)
 &lt;&lt;endif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="15" name="room" tags="" position="448,944" size="100,100">This is a living room
+</tw-passagedata><tw-passagedata pid="14" name="room" tags="" position="463,941" size="100,100">This is a living room
 A sofa, a table, a TV, and shelf on wall, That&#39;s all.
 
 A glowing ball is floating in the air.
@@ -314,11 +305,10 @@ A glowing ball is floating in the air.
 
 Go to other rooms
 [[Study room|room1]]
-[[bedroom1|room2]]
-&lt;&lt;if $hintC is 5&gt;&gt;[[bedroom2|room3]]&lt;&lt;else&gt;&gt;bedroom2 (is locked now)
+[[Bedroom1|room2]]
+&lt;&lt;if $hintC &gt; 5&gt;&gt;[[Bedroom2|room3]]&lt;&lt;else&gt;&gt;Bedroom2 (is locked now)
 &lt;&lt;endif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="16" name="monster" tags="" position="400,1201" size="100,100">&quot;Do you figure out who was killed? Who is the killer?&quot;
-&quot;Remember you have only one chance to tell me the correct answer.&quot;
+</tw-passagedata><tw-passagedata pid="15" name="monster" tags="" position="400,1201" size="100,100">&quot;Tell me who was killed?&quot;
 
 It&#39;s the...
 [[Husband]]
@@ -327,7 +317,7 @@ It&#39;s the...
 [[Female painter]]
 had been killed.
 
-&lt;&lt;set $killer to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="room2" tags="" position="876,938" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room2.png&quot; width=&quot;80%&quot;&gt;
+&lt;&lt;set $killer to 0&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="room2" tags="" position="876,940" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room2.png&quot; width=&quot;80%&quot;&gt;
 This is a dark tone room. It&#39;s probably a men&#39;s bedroom.
 
 On the left is a dark wooden wardrobe with a twin bed in the middle and a same dark wooden bedside dresser on the right.
@@ -340,16 +330,16 @@ Will you check......
 [[round table]]
 [[wastebasket]]
 &lt;&lt;if $hintC is 6&gt;&gt;or
-[[Turn the light off|off2]]
+__[[turn the light off|off2]]__
 
-[[leave this room|room]]
-&lt;&lt;elseif $hintC is 5&gt;&gt;Or 
-[[leave this room|room]]
+__[[Leave this room|room]]__
+&lt;&lt;elseif $hintC is 5&gt;&gt;or 
+__[[leave this room|room]]__
 
 &lt;&lt;endif&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="18" name="Husband" tags="" position="227,1076" size="100,100">&quot;Correct!&quot;
+</tw-passagedata><tw-passagedata pid="17" name="Husband" tags="" position="227,1076" size="100,100">&quot;Correct!&quot;
 
 &quot;Then tell me who killed him?&quot;
 
@@ -358,7 +348,7 @@ The killer is the...
 [[Son]]
 [[Female painter]]
 
-&lt;&lt;set $killer to $killer +1&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Wife" tags="" position="227,1180" size="100,100">&lt;&lt;set $son to 0&gt;&gt;
+&lt;&lt;set $killer to $killer +1&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Wife" tags="" position="227,1180" size="100,100">&lt;&lt;set $son to 0&gt;&gt;
 &lt;&lt;if $son is 0&gt;&gt;&lt;&lt;set $son to $son +1&gt;&gt;
 &quot;Wrong answer!!!&quot;
 &quot;Do you really think I didn&#39;t know who was killed and who is the killer!&quot;
@@ -367,7 +357,7 @@ The killer is the...
 &quot;But...&quot;
 &quot;You can have other options&quot;
 
-[[What options?]]</tw-passagedata><tw-passagedata pid="20" name="Son" tags="" position="125,1076" size="100,100">&lt;&lt;if $killer is 0&gt;&gt;&quot;Wrong answer!!!&quot;
+[[What options?]]</tw-passagedata><tw-passagedata pid="19" name="Son" tags="" position="125,1076" size="100,100">&lt;&lt;if $killer is 0&gt;&gt;&quot;Wrong answer!!!&quot;
 &quot;Do you really think I didn&#39;t know who was killed and who is the killer!&quot;
 &quot;I can&#39;t wait to enjoy your memory!!&quot;
 
@@ -384,7 +374,7 @@ You blink your eyes, and find you are back to your room.
 Somehow, you feel taht something bad happens if you answer wrong.
 
 [[But thanks God, you are back|bed]]
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Female painter" tags="" position="125,1180" size="100,100">&lt;&lt;set $son to 0&gt;&gt;
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Female painter" tags="" position="125,1180" size="100,100">&lt;&lt;set $son to 0&gt;&gt;
 &lt;&lt;if $son is 0&gt;&gt;&lt;&lt;set $son to $son +1&gt;&gt;
 &quot;Wrong answer!!!&quot;
 &quot;Do you really think I didn&#39;t know who was killed and who is the killer!&quot;
@@ -393,7 +383,8 @@ Somehow, you feel taht something bad happens if you answer wrong.
 &quot;But...&quot;
 &quot;You can have other options&quot;
 
-[[What options?]]</tw-passagedata><tw-passagedata pid="22" name="room3" tags="" position="594,1640" size="100,100">This is a warm tone bedroom. It&#39;s obvious a woman&#39;s bedroom.
+[[What options?]]</tw-passagedata><tw-passagedata pid="21" name="room3" tags="" position="594,1640" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room3.png&quot; width=&quot;80%&quot;&gt;
+This is a warm tone bedroom. It&#39;s obvious a woman&#39;s bedroom.
 
 The walls are pale pink, with a beige full-wall wardrobe on the left, a queen-size bed in the middle, a simple beige dressing table on the right, and the table full of cosmetics.
 
@@ -403,94 +394,94 @@ Will you take a look at......
 [[beige wardrobe]]
 [[queen bed]]
 [[dressing table]]
-&lt;&lt;if $number is 1&gt;&gt;or
-[[Turn the light off|off3]]
+&lt;&lt;if $hintC is 6&gt;&gt;or
+__[[Turn the light off|off3]]__
 
-[[Leave this room|room]]&lt;&lt;endif&gt;&gt;
-</tw-passagedata><tw-passagedata pid="23" name="What options?" tags="" position="125,1300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="24" name="bed" tags="" position="26,954" size="100,100">Now, it&#39;s time to have a high-quality and no disturbed sleeping.
+__[[Leave this room|room]]__&lt;&lt;endif&gt;&gt;
+</tw-passagedata><tw-passagedata pid="22" name="What options?" tags="" position="125,1300" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="23" name="bed" tags="" position="26,954" size="100,100">Now, it&#39;s time to have a high-quality and no disturbed sleeping.
 
-[[Good night]]</tw-passagedata><tw-passagedata pid="25" name="Good night" tags="" position="5,1104" size="100,100">Credit
+[[Good night]]</tw-passagedata><tw-passagedata pid="24" name="Good night" tags="" position="5,1104" size="100,100">Credit
 
 Story idea from a chinese novel &quot;我只喜歡你的人設&quot; by稚楚.
 Adapted by Guan yu Lin
 Game made by Guan Yu Lin
 
-&lt;&lt;link &quot;Restart&quot;&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="wardrobe" tags="" position="1121,937" size="100,100">&lt;&lt;if $number is 1&gt;&gt;
-You open the wardrobe and take all the clothes out. The light not only comes from the auto light, but also comes from the wall.
-
-When you look at the wall carefully, you find that the part of the light that is visible is the shape of a door.
-
-A door in the closet! Will this door lead to your original world!?
+&lt;&lt;link &quot;Restart&quot;&gt;&gt;&lt;&lt;run Engine.restart()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="wardrobe" tags="" position="1121,937" size="100,100">&lt;&lt;if $hintC is 6&gt;&gt;
+&lt;p&gt;You open the wardrobe and take all the clothes out. The light not only comes from the auto light, but also comes from the wall.
+When you look at the wall carefully, you find that the part of the light that is visible is the shape of a door.&lt;/p&gt;A door in the closet! Will this door lead to your original world!?
 
 [[Open the door|room4]]
+&lt;&lt;elseif $clue &gt;2&gt;&gt;
+When you try to leave the room, you feel you step on something.&lt;p&gt;__It is a key!__&lt;/p&gt;
 &lt;&lt;else&gt;&gt;You open the wardrobe and find that there is an automatic light inside it. When you open the door, it will light up.
 There are men&#39;s clothes inside, nothing special.
 &lt;&lt;endif&gt;&gt;
 
-[[Look at other things in this room|room2]]</tw-passagedata><tw-passagedata pid="27" name="twin bed" tags="" position="986,1102" size="100,100">You take the pillow off, move the quilt, and remove the sheets, but nothing is found.
+[[Look at other things in this room|room2]]</tw-passagedata><tw-passagedata pid="26" name="twin bed" tags="" position="986,1102" size="100,100">You take the pillow off, move the quilt, and remove the sheets, but nothing is found.
 
-&lt;&lt;if $hintC is 4&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;&lt;h2&gt;Then you try to move the bed. This bed is so light that you don&#39;t need any force to move it.
+&lt;&lt;if $hintC is 4&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;&lt;p&gt;Then you try to move the bed. This bed is so light that you don&#39;t need any force to move it.
 
 The bed is moved away, an coffer shows up.
 You input the number 1234. The coffer opens.
 
-There is an empty medical record folder and a property transfer power of attorney.
+__There is an empty medical record folder and a property transfer power of attorney.__&lt;/p&gt;
 
-You think that&#39;s all the clues you can find in this room.&lt;/h2&gt;
+You think that&#39;s all the clues you can find in this room.
 &lt;&lt;elseif $hintC &gt; 4 &gt;&gt;
 You moved the bed away, an coffer shows up.
 
-&lt;h2&gt;There is an empty medical record folder and a property transfer power of attorney.&lt;/h2&gt;
+&lt;p&gt;__There is an empty medical record folder and a property transfer power of attorney.__&lt;/p&gt;
 
 You think that&#39;s all the clues you can find in this room.
 &lt;&lt;endif&gt;&gt;
-[[Look at other things in this room|room2]]</tw-passagedata><tw-passagedata pid="28" name="bedside dresser" tags="" position="720,1097" size="100,100">You open the drawer and there is only some personal items inside. There is obvious dust on the drawer surface.
-Is it because no one has used it for a long time?
+[[Look at other things in this room|room2]]</tw-passagedata><tw-passagedata pid="27" name="bedside dresser" tags="" position="720,1097" size="100,100">You open the drawer and there is only some personal items inside. There is obvious dust on the drawer surface.
+__Is it because no one has used it for a long time?__
 
-[[Look at other things in this room|room2]]</tw-passagedata><tw-passagedata pid="29" name="round table" tags="" position="1121,1102" size="100,100">There is a laptop and a memo book on the table.
+[[Look at other things in this room|room2]]</tw-passagedata><tw-passagedata pid="28" name="round table" tags="" position="1121,1102" size="100,100">There is a laptop and a memo book on the table.
 
 Do you want to check
 [[laptop]]
 [[memo book]]
 
-Or [[look at something else|room2]]</tw-passagedata><tw-passagedata pid="30" name="wastebasket" tags="" position="855,1100" size="100,100">The trash can is filled with paper that has been shredded or smashed into balls.
+Or [[look at something else|room2]]</tw-passagedata><tw-passagedata pid="29" name="wastebasket" tags="" position="855,1099" size="100,100">The trash can is filled with paper that has been shredded or smashed into balls.
 
 You spread all the paper that was smashed together, and put those shredded paper back together.
 
-&lt;&lt;if $hintC is 1&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;Most are useless messege, but there is one papaer wrote an equation.
-&quot;1+2+3+4&quot;
+&lt;&lt;if $hintC is 1&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;&lt;p&gt;Most are useless messege, but there is one papaer wrote an equation.
+__&quot;1+2+3+4&quot;__
 
-You think it could be another 4-digit password.
+You think it could be another 4-digit password.&lt;/p&gt;
 
 &lt;&lt;elseif $hintC is 2&gt;&gt;
-you notice ther is one paper has the different handwriting than others, looks like kid&#39;s handwriting.
+&lt;p&gt;Most are useless messege, but there is one papaer wrote an equation.
+__&quot;1+2+3+4&quot;__
 
+You think it could be another 4-digit password.&lt;/p&gt;
+!!!!!!!hintC is &lt;&lt;print $hintC&gt;&gt;
 &lt;&lt;elseif $hintC is 3&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;
 Most are useless messege, but there is one papaer wrote an equation.
-&quot;1+2+3+4&quot;
+&lt;p&gt;__&quot;1+2+3+4&quot;__
 
 You also notice there is one paper has the different handwriting than others, looks like kid&#39;s handwriting.
 
-&quot;Daddy, the pen you gave me felled under the bed, can you pick it up for me?&quot;
+__&quot;Daddy, the pen you gave me felled under the bed, can you pick it up for me?&quot;__
 
-There is nothing suspicious about the content on this piece of paper, but why did he torn the paper off? Because he didn&#39;t want others to see it?
-
-&lt;&lt;elseif $hintC &gt;3&gt;&gt;
+There is nothing suspicious about the content on this piece of paper, but why did he torn the paper off? __Because he didn&#39;t want others to see it?__&lt;/p&gt;
+!!!!!!!hintC is &lt;&lt;print $hintC&gt;&gt;
+&lt;&lt;elseif $hintC &gt; 3&gt;&gt;
 Most are useless messege, but there is one papaer wrote an equation.
-&quot;1+2+3+4&quot;
+&lt;p&gt;__&quot;1+2+3+4&quot;__
 
-You think it could be another 4-digit password.
+You also notice there is one paper has the different handwriting than others, looks like kid&#39;s handwriting.
 
-You also notice ther is one paper has the different handwriting than others, looks like kid&#39;s handwriting.
-
-&quot;Daddy, the pen you gave me felled under the bed, can you pick it up for me?&quot;
-
+__&quot;Daddy, the pen you gave me felled under the bed, can you pick it up for me?&quot;__&lt;/p&gt;
+!!!!!!!!hintC is &lt;&lt;print $hintC&gt;&gt;
 &lt;&lt;else&gt;&gt;You look at all waste paper have arranged one by one, some write irrelevant words, some are children&#39;s paintings.
 But because there are too many messages, you can&#39;t figure out which one is useful.
 &lt;&lt;endif&gt;&gt;
 [[Look at something else|room2]]
 
-</tw-passagedata><tw-passagedata pid="31" name="laptop" tags="" position="1215,1232" size="100,100">You press the power button. 
+</tw-passagedata><tw-passagedata pid="30" name="laptop" tags="" position="1215,1232" size="100,100">You press the power button. 
 The screen lights up and the login screen appears.
 
 &quot;4-digit password&quot;
@@ -503,42 +494,50 @@ The word &quot;Rose&quot; attracts your attention.
 
 [[Check the other thing on the table|round table]]
 
-</tw-passagedata><tw-passagedata pid="32" name="memo book" tags="" position="1042,1233" size="100,100">&lt;&lt;if $hintC is 0&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;The page that is opened, write,&quot; What is 10 = ? &quot;.
+</tw-passagedata><tw-passagedata pid="31" name="memo book" tags="" position="1042,1233" size="100,100">&lt;&lt;if $hintC is 0&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;The page that is opened, write,&quot; What is 10 = ? &quot;.
 
 All right, you think, it&#39;s time to find the hint.
-
+!!!!!!hintC is &lt;&lt;print $hintC&gt;&gt;
 &lt;&lt;elseif $hintC is 2&gt;&gt;&lt;&lt;set $hintC to $hintC +1&gt;&gt;
 The page that is opened, write,&quot; What is 10 = ? &quot;.
-You finish the equation &quot; 10 = 1+2+3+4 &quot;
+&lt;p&gt;__You finish the equation &quot; 10 = 1+2+3+4 &quot;__
 
 Then you read every page of the memo, and when you turn to one page, the memo is taken down by you.
-
 You are shocked, and immediately find out that the other half of the paper was torn off. That&#39;s why this memo will be so easily taken down.
 
-Where is the other half part? Is it also in the wastebasket?
-
-&lt;&lt;elseif $hintC &gt;3&gt;&gt;
+__Where is the other half part? Is it also in the wastebasket?__&lt;/p&gt;
+!!!!!!!hintC is &lt;&lt;print $hintC&gt;&gt;
+&lt;&lt;elseif $hintC is 3&gt;&gt;
 The page that is opened, write,&quot; What is 10 = ? &quot;.
-You finish the equation &quot; 10 = 1+2+3+4 &quot;
-
-The page that was missing says,&quot;Daddy, the pen you gave me felled under the bed, can you pick it up for me?&quot;
+&lt;p&gt;__You finish the equation &quot; 10 = 1+2+3+4 &quot;__&lt;/p&gt;Then you read every page of the memo, and when you turn to one page, the memo is taken down by you.
+You are shocked, and immediately find out that the other half of the paper was torn off. That&#39;s why this memo will be so easily taken down.
+&lt;p&gt;__Where is the other half part? Is it also in the wastebasket?__&lt;/p&gt;
+&lt;&lt;elseif $hintC &gt; 3&gt;&gt;
+The page that is opened, write,&quot; What is 10 = ? &quot;.
+&lt;p&gt;__You finish the equation &quot; 10 = 1+2+3+4 &quot;__
+!!!!!!!!!hintC is &lt;&lt;print $hintC&gt;&gt;
+__The page that was missing says,&quot; Daddy, the pen you gave me felled under the bed, can you pick it up for me?&quot;__&lt;/p&gt;
 
 &lt;&lt;endif&gt;&gt;
-[[Check the other thing on the table|round table]]</tw-passagedata><tw-passagedata pid="33" name="beige wardrobe" tags="" position="835,1584" size="100,100">You open the closet and find that there is an automatic light inside it. When you open the door, it will light up.
+[[Check the other thing on the table|round table]]</tw-passagedata><tw-passagedata pid="32" name="beige wardrobe" tags="" position="835,1584" size="100,100">You open the closet and find that there is an automatic light inside it. When you open the door, it will light up.
 There are women&#39;s clothes inside, nothing special.
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="34" name="queen bed" tags="" position="839,1444" size="100,100">You take the pillow off, move the quilt, and remove the sheets, but nothing is found.
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="33" name="queen bed" tags="" position="839,1444" size="100,100">You take the pillow off, move the quilt, and remove the sheets, but nothing is found.
 Then you try to move the bed. Now this time the bed is heavy as other beds that you can barely move it.
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="35" name="dressing table" tags="" position="582,1877" size="100,100">You open every drawer and find a cosmetic case .
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="34" name="dressing table" tags="" position="581,1876" size="100,100">You open every drawer and find a cosmetic case .
 It looks normal at first, but you think the box is big, but there are very few things inside.
-You took all the things in the box and found that there is a number klotski game underneath.
-It muust be a lock to hind something. 
-
+You take all the things in the box. A number klotski game is underneath.
+It must be a lock to hind something. 
+&lt;&lt;if $hintC &lt;6&gt;&gt;
 [[Solve the Klotski|klotski]]
+&lt;&lt;else&gt;&gt;
+You solve the klitski. There are three pieces of paper inside, one is a small piece and two pieces are folded together.
+&lt;p&gt;Only one sentence __&quot;turn off the light&quot;__ was written on the paper of the small sheet.
+__For the paper that was folded, that is a case of a 14-year-old child who is diagnosed with bipolar disorder and a divorse agreement.__&lt;/p&gt;She hide the divorse agreement. Does that mean she is hesitating to divorce?
+&lt;&lt;endif&gt;&gt;
 
-
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="36" name="klotski" tags="" position="646,2007" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/8.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="35" name="klotski" tags="" position="644,2006" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/8.jpg&quot; width=&quot;30%&quot;&gt;
 Klotski is a game that the player is not allowed to remove blocks, and may only slide blocks horizontally and vertically. 
 Since it is a digital version klotski. You need to arrange the numbers in order.
 Now the number is 
@@ -552,155 +551,157 @@ You can move 3 down or move 1 to the right, and finally the klotski should be li
 Do you want to
 [[Move 3 down|9]]
 or
-[[Move 1 to the right|7]]</tw-passagedata><tw-passagedata pid="37" name="9" tags="" position="481,2050" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/9.jpg&quot; width=&quot;400&quot;&gt;
+[[Move 1 to the right|7]]</tw-passagedata><tw-passagedata pid="36" name="9" tags="" position="481,2050" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/9.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 3 up|8]]
 or
 [[Move 2 to the right|11]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="38" name="7" tags="" position="805,2054" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/7.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="37" name="7" tags="" position="805,2054" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/7.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 2 down|6]]
 or
 [[Move 1 to the left|8]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="39" name="8" tags="" position="660,2187" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/8.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="38" name="8" tags="" position="660,2187" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/8.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 3 down|9]]
 or
 [[Move 1 to the right|7]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="40" name="11" tags="" position="356,2050" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/11.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="39" name="11" tags="" position="356,2050" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/11.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 1 up|12]]
 or
 [[Move 2 to the left|9]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="41" name="12" tags="" position="228,2051" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/12.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="40" name="12" tags="" position="227,2050" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/12.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 1 down|11]]
 or
 [[Move 3 to the right|1]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="42" name="1" tags="" position="133,1918" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/1.jpg&quot; width=&quot;400&quot;&gt;
-&lt;&lt;set $hintC to $hintC +1&gt;&gt;&lt;&lt;set $number to $number +1&gt;&gt;You solve the Klotski!!
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="41" name="1" tags="" position="133,1918" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/1.jpg&quot; width=&quot;30%&quot;&gt;
+&lt;&lt;set $hintC to $hintC +1&gt;&gt;You solve the Klotski!!
 When you finish the game, the whole piece of wood automatically bounces so you can take it out easily.
-There are two pieces of paper inside, one is small piece and the other  was two pieces folded together.
-
-Only one sentence 
-&quot;turn off the light&quot; 
+There are three pieces of paper inside, one is a small piece and two pieces are folded together.
+&lt;p&gt;Only one sentence 
+__&quot;turn off the light&quot;__
 was written on the paper of the small sheet.
 
-&lt;p&gt;For the paper that was folded, that is a case of a 14-year-old child who is diagnosed with bipolar disorder and a divorse agreement.&lt;/p&gt;
-She hide the divorse agreement. Does that mean she is hesitating to divorce?
-
+__For the paper that was folded, that is a case of a 14-year-old child who is diagnosed with bipolar disorder and a divorse agreement.__
+She hide the divorse agreement. Does that mean she is hesitating to divorce?&lt;/p&gt;
 [[Look at other things in this room|room3]]
 
 
-</tw-passagedata><tw-passagedata pid="43" name="6" tags="" position="926,2053" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/6.jpg&quot; width=&quot;400&quot;&gt;
+</tw-passagedata><tw-passagedata pid="42" name="6" tags="" position="926,2053" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/6.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 2 up|7]]
 or
 [[Move 3 to the left|5]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="44" name="5" tags="" position="1044,2054" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/5.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="43" name="5" tags="" position="1044,2054" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/5.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 1 up|4]]
 or
 [[Move 3 to the right|6]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="45" name="4" tags="" position="1165,2054" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/4.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="44" name="4" tags="" position="1165,2054" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/4.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 1 down|5]]
 or
 [[Move 2 to the right|3]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="46" name="3" tags="" position="1282,2053" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/3.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="45" name="3" tags="" position="1281,2053" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/3.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 3 down|10]]
 or
 [[Move 2 to the left|4]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="47" name="10" tags="" position="1280,1930" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/10.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="46" name="10" tags="" position="1280,1930" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/10.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 3 up|3]]
 or
 [[Move 1 to the left|2]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="48" name="2" tags="" position="1278,1804" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/2.jpg&quot; width=&quot;400&quot;&gt;
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="47" name="2" tags="" position="1278,1804" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/number/2.jpg&quot; width=&quot;30%&quot;&gt;
 Do you want to
 [[Move 2 up|1]]
 or
 [[Move 1 to the right|10]]
 
 
-[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="49" name="off3" tags="" position="433,1574" size="100,100">You turn the light off, but the room just becomes dark, nothing happens.
+[[Look at other things in this room|room3]]</tw-passagedata><tw-passagedata pid="48" name="off3" tags="" position="433,1574" size="100,100">You turn the light off, but the room just becomes dark, nothing happens.
 
 Maybe you need to try another room.
 
-[[Turn the light on|room3]]</tw-passagedata><tw-passagedata pid="50" name="off1" tags="" position="877,454" size="100,100">You turn the light off, but the room just becomes dark, nothing happens.
+[[Turn the light on|room3]]</tw-passagedata><tw-passagedata pid="49" name="off1" tags="" position="877,454" size="100,100">You turn the light off, but the room just becomes dark, nothing happens.
 
 Maybe you need to try another room.
 
-[[Turn the light on|room1]]</tw-passagedata><tw-passagedata pid="51" name="off2" tags="" position="1004,805" size="100,100">You turn off the light, and find that there is light coming out of the gap in the wardrobe.
+[[Turn the light on|room1]]</tw-passagedata><tw-passagedata pid="50" name="off2" tags="" position="1004,805" size="100,100">You turn off the light, and find that there is light coming out of the gap in the wardrobe.
 
-[[Check the wardrobe|wardrobe]]</tw-passagedata><tw-passagedata pid="52" name="room4" tags="" position="1273,747" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room4.png&quot; width=&quot;80%&quot;&gt;
+[[Check the wardrobe|wardrobe]]</tw-passagedata><tw-passagedata pid="51" name="room4" tags="" position="1273,747" size="100,100">&lt;img src=&quot;https://guanyulin.github.io/killer/room4.png&quot; width=&quot;80%&quot;&gt;
 The moment you open the door, a rich rose scent comes out.
 The room has barely any furniture here, only a king-size bed, an easel and whole room of paintings.
-&lt;&lt;if $clue &lt; 2&gt;&gt;
+&lt;&lt;if $hintC &lt; 7&gt;&gt;
 Look at...
 [[those paintings]]
 [[easel]]
 [[king-size bed]]
 
-&lt;&lt;elseif $clue &gt;= 2&gt;&gt;
-&lt;h2&gt;Seems like the person who lived here was the woman who invited the husband to have dinner. The art exhibition he was looking at probably was also her exhibition.
-Did the husband had an affair?&lt;/h2&gt;
-&lt;&lt;endif&gt;&gt;
+&lt;&lt;elseif $hintC &gt;=  7&gt;&gt;
+&lt;p&gt;Seems like the person who lived here was the woman who invited the husband to have dinner. The art exhibition he was looking at probably was also her exhibition.
+The husband had an affair.
+Did she kill him? She has no reason to kill him.&lt;/p&gt;
+
 Look at...
 [[those paintings]]
 [[easel]]
 [[king-size bed]]
 
-[[Leave this room|wardrobe]]</tw-passagedata><tw-passagedata pid="53" name="those paintings" tags="" position="1426,612" size="100,100">All the paintings make you more or less associated with rose.
+[[Leave this room|wardrobe]]
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="those paintings" tags="" position="1425,612" size="100,100">All the paintings make you more or less associated with rose.
 Some of them have not been framed yet.
 It must be someone used to paint here.
-Why this person, or this woman wanted to paint in other&#39;s hidden room?
+__Why this person, or this woman wanted to paint in other&#39;s hidden room?__
 
-Were they doing something unspeckable? Is this why the wife wants to divorce?
+__Were they doing something unspeckable? Is this why the wife wants to divorce?__
 
-Look at [[something else|room4]]</tw-passagedata><tw-passagedata pid="54" name="easel" tags="" position="1426,745" size="100,100">&lt;&lt;set $clue to $clue +1&gt;&gt;It is a normal easel, the paper above is still blank.
+Look at [[something else|room4]]</tw-passagedata><tw-passagedata pid="53" name="easel" tags="" position="1427,748" size="100,100">&lt;&lt;set $clue to $clue +1&gt;&gt;It is a normal easel, the paper above is still blank.
 It doesn&#39;t look like it can hide things.
-
-&lt;&lt;if $clue is &gt;= 2&gt;&gt;You want to go from the front of the easel to the back of it, but accidentally kicked down the easel.
+&lt;&lt;if $clue &gt;= 2&gt;&gt;&lt;p&gt;You want to go from the front of the easel to the back of it, but accidentally kicked down the easel.
 An abnormal hollow sound is emitted from the place where the easel falls.
 You move the easel and the paintings on the ground away and find a small space under the floor where they can hide things.
 
-There is one little bottle in it, a chemical is recognized as a poison.
-
-
-Look at [[something else|room4]]</tw-passagedata><tw-passagedata pid="55" name="king-size bed" tags="" position="1426,886" size="100,100">You take the pillow off, move the quilt, and remove the sheets, but nothing is found.
+__There is one little bottle in it, a chemical is recognized as a toxicant__.
+__You think that the toxicant is too easy to be discovered so it seems like someone deliberately put it here.__&lt;/p&gt;
+&lt;&lt;endif&gt;&gt;
+Look at [[something else|room4]]</tw-passagedata><tw-passagedata pid="54" name="king-size bed" tags="" position="1426,886" size="100,100">You take the pillow off, move the quilt, and remove the sheets, but nothing is found.
 Then you try to move the bed. The bed is heavy as other beds that you can barely move it.
 
-But why did the husbandwant to have a hidden room behind his closet, especially a hidden room with a king-size bed while he slept on a twin bed in his own room?
+__But why did the husband want to have a hidden room behind his closet, especially a hidden room with a king-size bed while he slept on a twin bed in his own room?__
 
-Look at [[something else|room4]]</tw-passagedata><tw-passagedata pid="56" name="ready" tags="" position="401,1075" size="100,100">The voice of the monster comes out from this glowing ball.
+Look at [[something else|room4]]</tw-passagedata><tw-passagedata pid="55" name="ready" tags="" position="401,1076" size="100,100">The voice of the monster comes out from this glowing ball.
 
-&quot;Do you find out the answer yet?&quot;
+&quot;Do you figure out who was killed? Who is the killer?&quot;
+&quot;Remember you have only one chance to tell me the correct answer.&quot;
 
 [[Yes|monster]]
 
-[[No|room]]</tw-passagedata></tw-storydata>
+[[No|room]]
+
+(Once you click Yes, you cannot go back to other rooms.)</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="\\s"===e?"\\S":e.replace(/^\[/,"[^"),r="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",n=r.replace("\\-",""),a=function(){return"("+r+"+)\\(([^\\)\\|\\n]+)\\):|("+r+"+):([^;\\|\\n]+);|((?:\\."+r+"+)+);|((?:#"+r+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:t,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:r,anyLetterStrict:n,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){!function(e){if(e&&e.prototype&&null==e.prototype.firstElementChild){var t=Node.ELEMENT_NODE;Object.defineProperty(e.prototype,"firstElementChild",{get:function(){for(var e=this.childNodes,r=0;r<e.length;++r){var n=e[r];if(n.nodeType===t)return n}return null}})}}(window.Node||window.Element)}(),function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=e&&function(){try{var e=document.createElement("audio").play();return e.catch(function(){}),e instanceof Promise}catch(e){}return!1}(),r=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),n=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),i=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),o=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),s=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,audioPromise:t,fileAPI:r,geolocation:n,mutationObserver:a,performance:i,touch:o,transitionEndEvent:s})}(),Visibility=function(){function e(){return Boolean(r&&document[r.hiddenProperty])}function t(){return r&&document[r.stateProperty]||"visible"}var r=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return null}();return Object.freeze(Object.defineProperties({},{isHidden:{value:e},state:{value:t},hiddenProperty:{value:r.hiddenProperty},stateProperty:{value:r.stateProperty},changeEvent:{value:r.changeEvent}}))}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){return r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){switch(n.nodeName.toUpperCase()){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){var n=jQuery(document.createElement("div")),a=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return a.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){a.hasClass("enabled")?(a.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(a.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(n),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(n),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(n),n.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var n=_slicedToArray(e,2),a=n[0],i=n[1];return r(a,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))
