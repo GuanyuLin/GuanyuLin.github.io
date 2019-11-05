@@ -1,0 +1,76 @@
+body {
+  color: white;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 14px;
+}
+
+[id=wrapper] {
+  width: 50vw;
+  background: white;
+  color: #000;
+  margin: 20px auto;
+  overflow: auto;
+  padding: 2.6rem;
+  border: 2px solid #E8A2A0;
+}
+
+header {
+  text-align: center;
+  border-bottom: #E7D8C9 dashed 1px;
+}
+
+header h1 {
+  font-family: 'PT Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header p {
+  padding: 0;
+  margin-top: 5px;
+  color: #000;
+}
+h3 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bolder;
+}
+[id=demo] {
+  font-size: 18px;
+}
+button {
+  font-size: 16px;
+  background: #fff;
+  border: 2px solid #E8A2A0;
+  color: #E8A2A0;
+  padding: 6px 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+input[type="submit"] {
+  font-size: 16px;
+  background: #E8A2A0;
+  border: 0;
+  color: #fff;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+.restart {
+  font-size: 16px;
+  background: #E8A2A0;
+  border: 0;
+  color: #fff;
+  padding: 10px 12px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+[id=results] {
+  margin-top: 1rem;
+}
+
+[id=results] h3 {
+  background: #FFBEB0;
+  padding: 10px;
+  margin: 10px 0;
+  color: #000;
+}
