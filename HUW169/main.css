@@ -47,6 +47,8 @@ body {
     cursor: pointer;
 }
 h2{
+    font-size: 30px;
+    font-weight: 500;
     color: #363D59;
 }
 h3{
@@ -61,4 +63,16 @@ p{
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+.sub a{
+    font-family: "DM Sans", sans-serif;
+    font-size: 30px;
+    color: #363D59;
+    text-decoration-line: none;
+}
+.sub a:hover{
+    font-family: "DM Sans", sans-serif;
+    font-size: 30px;
+    color: #363D59;
+    text-decoration-line: underline;
 }
