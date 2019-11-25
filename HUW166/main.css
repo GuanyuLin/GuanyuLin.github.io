@@ -1,0 +1,187 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	margin: 0;
+}
+h1 {
+	color: #331103;
+	font-family: Sail;
+	font-size: 70px;
+	line-height: 14px;
+	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #FFF, 0 -1px #000;
+}
+h2 {
+	color: #447A4B;
+	font-family: 'Cardo';
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+h3{
+    color: #8C7B6F;
+    font-size: 14px;
+    text-align: center;
+}
+p {
+	line-height: 30px;
+}
+img {
+	border: 0;
+}
+header {
+	text-align: center;
+	padding: 30px;
+	margin-top: 10px;
+}
+nav {
+	font-family: Josefin Sans;
+	font-size: 16px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+    font-size: 16px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+nav a {
+	color: #493B30;
+	text-decoration: none;
+}
+nav a:hover{
+	color: #3E7F00;
+}
+.currentpage{
+	color: #3E7F00;
+	text-decoration: underline;
+}
+main{
+    width: 80%;
+    max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+    display: block;
+}
+footer{
+	width: 80%;
+    max-width: 1000px;
+	color: #000;
+	font-family: 'Josefin Sans';
+	font-size: 14px;
+	border-top: 1px solid #ddd;
+	padding: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer p{
+	margin: 0;
+}
+.wrapper{
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.intro{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.home{
+	color: #fff;
+	text-align: center;
+	margin-bottom: 20px;
+	padding-top: 160px;
+	padding-bottom: 160px;
+	background-color: #fff;
+	background-image: url(image/picture/teashop.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.pushright{
+	padding-right: 1.5%;
+}
+.left{
+    float: right;
+}
+.info{
+	text-align: center;
+}
+.picleft{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.picright{
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.history{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hiscontent{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sideleft{
+    float: left;
+    width: 50%;
+}
+.social {
+	float: right;
+}
+
+.content { 
+  margin: 0 auto;
+  max-width: 100%;
+  font-size: 0; 
+}
+.content .lleft, .content .center, .content .right { 
+   display: inline-block;
+   font-size: 16px; 
+   text-align: center;
+}
+.content .lleft, .content .right 
+{ 
+  width: 330px;
+}
+.content .center 
+{ 
+  width: 330px;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+ul{
+    list-style-type: none;
+	padding: 0;
+	margin-bottom: 30px;
+    text-align: center;
+}
+li{
+    color: #50594F;
+    font-size: 12px;
+    display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 10px;
+}
+a{
+	color: #8C7B6F;
+	text-decoration: none;
+}
+a:hover{
+    color: #8C7B6F;
+    text-decoration: underline;
+}
